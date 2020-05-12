@@ -5,4 +5,4 @@ jobs:
   steps:
   - checkout: self
     fetchDepth: 1
-  - bash: "[ \"master\" = \"$BUILD_SOURCEBRANCHNAME\" ]"
+  - bash: "echo \"branch = $BUILD_SOURCEBRANCHNAME\" && [ \"master\" = \"$BUILD_SOURCEBRANCHNAME\" ]"

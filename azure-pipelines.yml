@@ -1,0 +1,8 @@
+jobs:
+- job: test
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - bash: [ "master" = "$BUILD_SOURCEBRANCHNAME" ]
